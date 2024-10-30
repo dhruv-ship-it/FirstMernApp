@@ -1,0 +1,30 @@
+{
+  "name": "mern-tutorial-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+"build": "cd client && npm run build",
+
+"install-client": "cd client && npm install",
+
+"heroku-postbuild": "npm run install-client && npm run build",
+
+"start": "node server.js",
+
+"client": "cd client && npm start",
+
+"dev": "concurrently -n 'server, client' -c 'red, green' \"nodemon server.js\" \"npm run client\""
+  },
+
+  
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.7.3"
+  }
+}
