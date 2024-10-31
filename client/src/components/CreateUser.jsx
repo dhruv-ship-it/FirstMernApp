@@ -29,7 +29,7 @@ export default class CreateUser extends Component{
         };
 
         axios.post("/users/add",user).then((res)=>{console.log(res.data)});
-    }
+    } 
 
     render(){
         return <div>
